@@ -1,4 +1,11 @@
 package cuentas;
+
+/**
+ * Esta clase identifica una cuenta y le hace el ingreso o retirada de valores 
+ * @author Henrique
+ * @since 16/12/2019
+ * @version 1.0
+ */
 public class CCuenta {
 
 
