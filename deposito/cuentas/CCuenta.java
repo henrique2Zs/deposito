@@ -8,9 +8,14 @@ package cuentas;
  */
 public class CCuenta {
 
-
     private String nombre;
+    /**
+     * @param nombre es el nombre del proprietario de ela cuenta 
+     */
     private String cuenta;
+    /**
+     * @param cuenta es el numero de tipo entero de la cuenta
+     */
     private double saldo;
     private double tipoInterés;
 
@@ -51,14 +56,23 @@ public class CCuenta {
         if (cantidad<0)
             throw new Exception("No se puede ingresar una cantidad negativa");
         saldo = saldo + cantidad;
+        /**
+         * No ingresa valores  negativos
+         */
     }
 
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
             throw new Exception ("No se puede retirar una cantidad negativa");
+        /**
+         * No retira valores negativos
+         */
         if (estado()< cantidad)
             throw new Exception ("No se hay suficiente saldo");
+        /**
+         * No retira valor inexistente en cuenta
+         */
         saldo = saldo - cantidad;
     }
 }
